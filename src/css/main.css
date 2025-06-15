@@ -1,0 +1,102 @@
+.main__container {
+  width: 100%;
+  height: calc(100vh - 125px); /* Заменили height на min-height */
+  display: flex; /* Добавили для центрирования */
+  align-items: center; /* Центрируем содержимое */
+}
+
+.main__block {
+  display: flex;
+  padding: clamp(20px, 5vw, 50px); /* Адаптивный padding */
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+  background: #e3e3e3;
+  border-radius: clamp(30px, 5vw, 75px); /* Адаптивный радиус */
+  width: 100%;
+  box-sizing: border-box;
+
+  /* Изменяем композицию на мобильных */
+  flex-wrap: wrap;
+}
+
+.main__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 min(5%, 35px); /* Относительные отступы */
+  gap: clamp(20px, 3vw, 60px); /* Адаптивный отступ */
+  color: #212121;
+  flex: 1; /* Занимает доступное пространство */
+  min-width: 300px; /* Минимальная ширина */
+}
+
+.main__title {
+  font-size: clamp(32px, 6vw, 64px); /* Адаптивный размер */
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.2; /* Улучшенный интерлиньяж */
+}
+
+.main__subtitle {
+  margin: 0;
+  font-size: clamp(18px, 2.5vw, 32px); /* Адаптивный размер */
+  font-weight: 400;
+}
+
+.main__button-container {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.main__button {
+  width: clamp(200px, 25vw, 300px); /* Адаптивная ширина */
+  height: clamp(60px, 15vh, 125px); /* Адаптивная высота */
+  border-radius: clamp(15px, 2vw, 25px);
+  background: #b3b3b3;
+  padding: 10px 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Центрируем содержимое по вертикали */
+  color: #212121;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: clamp(16px, 1.8vw, 20px);
+  transition: all 0.3s ease;
+
+  /* Улучшаем доступность */
+  &:hover,
+  &:focus {
+    background: #bdb324;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+/* Медиа-запрос для мобильных */
+@media (max-width: 768px) {
+  .main__block {
+    flex-direction: column;
+    text-align: center; /* Центрируем текст */
+    gap: 40px;
+  }
+
+  .main__button-container {
+    align-items: center; /* Центрируем кнопку */
+    width: 100%;
+  }
+
+  .main__button {
+    width: 100%;
+    max-width: 300px;
+  }
+}

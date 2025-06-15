@@ -1,0 +1,301 @@
+.request-button_link {
+  text-decoration: none;
+  text-transform: uppercase;
+
+  padding: 15px 30px;
+  background-color: #E8DA17;
+  border: 0;
+  color: #212121;
+  border-radius: 15px;
+  outline: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.15s;
+}
+.request-button_link:hover {
+    cursor: pointer;
+  background-color: #bfb417;
+  transition: 0.15s;
+}
+
+.input-box {
+  height: 65px;
+
+  position: relative;
+}
+
+.input-box label {
+  position: absolute;
+
+  left: 25px;
+  top: 20px;
+
+  font-size: 20px;
+  font-weight: 400;
+  color: #212121;
+
+  transition: 0.25s;
+
+  user-select: none;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+
+  outline: none;
+  border: 0;
+  border-radius: 15px;
+
+  padding: 15px 20px 0px 30px;
+
+  font-size: 24px;
+  font-weight: 500;
+
+  background-color: #ffffff;
+
+  border: 1px solid #ffffff;
+  transition: 0.25s;
+}
+
+.input-box textarea {
+  width: 100%;
+  height: 100%;
+
+  resize: none;
+
+  outline: none;
+  border: 0;
+  border-radius: 15px;
+
+  padding: 25px 20px 0px 30px;
+
+  font-size: 24px;
+  font-weight: 500;
+
+  background-color: #ffffff;
+
+  border: 1px solid #ffffff;
+  transition: 0.25s;
+}
+
+.input-box:hover input {
+  background-color: #f5f5f5;
+  border: 1px solid #f5f5f5;
+  transition: 0.25s;
+}
+.input-box input:focus {
+  border: 1px solid #d9d48c;
+}
+
+.input-box input:focus ~ label,
+.input-box input:not(:placeholder-shown) ~ label {
+  transform: scale(0.6) translateY(-30px) translateX(-35%);
+  opacity: 0.75;
+
+  transition: 0.25s;
+}
+
+.input-box:hover textarea {
+  background-color: #f5f5f5;
+  border: 1px solid #f5f5f5;
+  transition: 0.25s;
+}
+.input-box textarea:focus {
+  border: 1px solid #d9d48c;
+}
+
+.input-box textarea:focus ~ label,
+.input-box textarea:not(:placeholder-shown) ~ label {
+  transform: scale(0.6) translateY(-30px) translateX(-35%);
+  opacity: 0.75;
+
+  transition: 0.25s;
+}
+
+:root {
+  --light-gray: #a5a5a5;
+  --active-main-color: #d9d48c;
+}
+
+.select {
+  position: relative;
+  height: 65px;
+  width: 100%;
+  padding: 15px 20px 0px 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  background-color: #ffffff;
+  z-index: 4;
+  outline: none;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .select:hover {
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    transition: 0.25s;
+  }
+  .select__option:hover {
+    background-color: rgba(217, 212, 140, 0.25);
+    transition: background-color 0.25s;
+  }
+}
+
+.select.select_active {
+  border: 1px solid var(--active-main-color);
+}
+
+.select__label {
+  position: absolute;
+
+  left: 25px;
+  top: calc(50% - 12px);
+
+  font-size: 20px;
+  font-weight: 400;
+  color: #212121;
+
+  transition: 0.25s;
+
+  user-select: none;
+}
+
+.select.select_active .select__label,
+.select.select_selected .select__label {
+  transform: scale(0.6) translateY(-30px) translateX(-35%);
+  opacity: 0.75;
+
+  transition: 0.25s;
+}
+
+.select__selectedOption {
+  font-size: 24px;
+  font-weight: 500;
+  color: #212121;
+  user-select: none;
+  z-index: 5;
+  transition: color 0.15s;
+}
+
+.select.select_active > .select__selectedOption {
+  color: var(--light-gray);
+  transition: color 0.15s;
+}
+
+.arrow {
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: absolute;
+  margin: 0 10px;
+}
+
+.arrow > span {
+  top: 0.5rem;
+  position: absolute;
+  width: 12px;
+  height: 1px;
+  background-color: var(--light-gray);
+  display: inline-block;
+  transition: all 0.1s cubic-bezier(0.81, 0.11, 0.61, 0.93);
+}
+
+.arrow > span:first-child {
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.arrow > span:last-child {
+  right: 0;
+  transform: rotate(-45deg);
+}
+
+.select.select_active > .arrow > span:first-child {
+  transform: rotate(-45deg);
+}
+
+.select.select_active > .arrow > span:last-child {
+  transform: rotate(45deg);
+}
+
+.select__options {
+  position: absolute;
+  top: calc(100% + 3px);
+  left: 0;
+  min-width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 15px;
+  box-shadow: 0px 0px 13px -8px black;
+  backdrop-filter: blur(2px);
+  z-index: 10;
+  transform-origin: top;
+  will-change: transform opacity;
+  display: none;
+  overflow: hidden;
+}
+
+.select__options_entering {
+  animation: options-entering 0.25s forwards;
+}
+
+.select__options_exiting {
+  animation: options-closing 0.17s forwards 0.08s;
+}
+
+@keyframes options-entering {
+  0% {
+    opacity: 0;
+    transform: scaleY(0.85) translateY(-15px);
+  }
+  100% {
+    opacity: 0.95;
+    transform: scaleY(1) translateY(0px);
+  }
+}
+
+@keyframes options-closing {
+  0% {
+    opacity: 0.95;
+    transform: scaleY(1) translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: scaleY(0.75) translateY(-15px);
+  }
+}
+
+.select__option {
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  border-radius: 10px;
+  transition: background-color 0.25s;
+}
+
+.select__option_active {
+  background-color: rgba(217, 212, 140, 0.75) !important;
+}
