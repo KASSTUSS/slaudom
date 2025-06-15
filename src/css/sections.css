@@ -22,7 +22,7 @@
   height: 375px;
   padding: 60px 50px;
   background-color: #e3e3e3;
-  border-radius: 60px;
+  border-radius: clamp(30px, 5vw, 75px); /* Адаптивный радиус */
   position: relative;
   overflow: hidden;
   z-index: 0;
