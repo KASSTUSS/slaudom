@@ -25,6 +25,7 @@
   border-radius: 60px;
   position: relative;
   overflow: hidden;
+  z-index: 0;
 
   transition: 0.25s;
 }
@@ -563,7 +564,7 @@ a.section-block-contacts__info-address-large {
   .section-block-contacts__info-medium {
     font-size: clamp(14px, 3.5vw, 20px);
   }
-  
+
   .feedback-section__grid-container {
     gap: 20px;
   }
