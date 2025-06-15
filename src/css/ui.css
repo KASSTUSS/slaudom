@@ -3,7 +3,7 @@
   text-transform: uppercase;
 
   padding: 15px 30px;
-  background-color: #E8DA17;
+  background-color: #e8da17;
   border: 0;
   color: #212121;
   border-radius: 15px;
@@ -18,7 +18,7 @@
   transition: 0.15s;
 }
 .request-button_link:hover {
-    cursor: pointer;
+  cursor: pointer;
   background-color: #bfb417;
   transition: 0.15s;
 }
@@ -298,4 +298,30 @@
 
 .select__option_active {
   background-color: rgba(217, 212, 140, 0.75) !important;
+}
+
+@media screen and (max-width: 600px) {
+  .select__label,
+  .input-box label {
+    font-size: clamp(17px, 3.75vw, 20px);
+    top: 18px;
+    padding-right: 20px;
+  }
+  .input-box {
+    height: 55px;
+  }
+  .select {
+    height: auto;
+    min-height: 55px;
+    padding: 25px 50px 10px 30px;
+  }
+  .select__selectedOption,
+  .input-box input,
+  .input-box textarea {
+    font-size: clamp(18px, 4.25vw, 24px);
+  }
+
+  .input-box textarea {
+    padding-top: 40px;
+  }
 }
