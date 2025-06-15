@@ -15,9 +15,6 @@
   border-radius: clamp(30px, 5vw, 75px); /* Адаптивный радиус */
   width: 100%;
   box-sizing: border-box;
-
-  /* Изменяем композицию на мобильных */
-  flex-wrap: wrap;
 }
 
 .main__text {
@@ -32,7 +29,7 @@
 }
 
 .main__title {
-  font-size: clamp(32px, 6vw, 64px); /* Адаптивный размер */
+  font-size: clamp(32px, 5vw, 64px); /* Адаптивный размер */
   font-weight: 500;
   margin: 0;
   line-height: 1.2; /* Улучшенный интерлиньяж */
@@ -82,21 +79,78 @@
   }
 }
 
-/* Медиа-запрос для мобильных */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .main__block {
     flex-direction: column;
-    text-align: center; /* Центрируем текст */
-    gap: 40px;
   }
-
-  .main__button-container {
-    align-items: center; /* Центрируем кнопку */
+  .main__text {
+    justify-content: flex-start;
     width: 100%;
+    height: auto;
+    padding-top: clamp(70px, 9vw, 125px);
+  }
+  .main__title {
+    font-size: clamp(32px, 6.5vw, 64px);
+  }
+  .main__button-container {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .main__button {
+    height: 80px;
+  }
+}
+
+@media (max-width: 950px) {
+  .main__container {
+    height: clamp(350px, 50vw, 500px);
+  }
+  .main__text {
+    justify-content: flex-start;
+    padding-top: 30px;
   }
 
+  .main__title {
+    font-size: clamp(32px, 7vw, 54px);
+  }
+}
+
+@media (max-width: 768px) {
+  .main__container {
+    height: clamp(350px, 60vw, 500px);
+  }
+  .main__title {
+    font-size: clamp(32px, 7vw, 54px);
+  }
+  .main__text {
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .main__button-container {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+  }
+  .main__text {
+    padding-right: 35px;
+  }
+
+  .main__title {
+    font-size: clamp(28px, 7vw, 54px);
+  }
   .main__button {
     width: 100%;
-    max-width: 300px;
+
+    font-size: clamp(16px, 5vw, 20px);
   }
 }
