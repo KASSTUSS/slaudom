@@ -16,18 +16,25 @@
   grid-template-rows: auto;
 
   gap: 24px;
+  text-decoration: none;
+  color: #212121;
+  padding-bottom: 30px;
 }
 
 .section__grid-block {
+  display: block;
   height: 375px;
   padding: 60px 50px;
-  background-color: #e3e3e3;
+  background: rgba(227, 227, 227, 0.5);
+  box-shadow: 5px 5px 20px -20px rgba(0, 0, 0, 0.65);
   border-radius: clamp(30px, 5vw, 75px); /* Адаптивный радиус */
   position: relative;
   overflow: hidden;
   z-index: 0;
 
   transition: 0.25s;
+  text-decoration: none;
+  color: #212121;
 }
 
 .section__grid-block_select {
@@ -120,6 +127,40 @@
   bottom: -10px;
 }
 
+#dye_svg_block {
+  -webkit-mask: url(../img/dye.svg) no-repeat center;
+  mask: url(../img/dye.svg) no-repeat center;
+  width: 150px;
+  height: 150px;
+  bottom: 10px;
+  left: 10%;
+}
+#welding_svg_block {
+  -webkit-mask: url(../img/welding.svg) no-repeat center;
+  mask: url(../img/welding.svg) no-repeat center;
+  width: 150px;
+  height: 150px;
+  bottom: 10px;
+  left: 40%;
+}
+#closer_svg_block {
+  -webkit-mask: url(../img/closer.svg) no-repeat center;
+  mask: url(../img/closer.svg) no-repeat center;
+  -webkit-mask-size: contain;
+  width: 150px;
+  height: 150px;
+  right: 10%;
+  bottom: 10px;
+}
+
+.keys-input__chip-image {
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  background-color: #808080;
+  transform: rotate(15deg);
+}
+
 .section-block__img {
   bottom: -35px;
   right: 0;
@@ -146,6 +187,10 @@
 
 #chip_svg {
   width: 350px;
+}
+
+#all-services .section__main {
+  grid-template-columns: repeat(6, 1fr);
 }
 
 #to-zpu-section .section__main {
@@ -289,6 +334,75 @@ a.section-block-contacts__info-address-large {
 
   gap: 35px;
 }
+#advantages {
+  display: flex;
+  padding-right: 40px;
+
+  justify-content: center;
+  align-items: center;
+}
+.advantages__container {
+  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: flex-end;
+  gap: 90px;
+}
+
+.advantages__item-container {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+}
+
+.advantages__img {
+  width: auto;
+  max-width: 170px;
+  max-height: 150px;
+  min-height: 100px;
+  opacity: 0.75;
+}
+
+#all-works-img {
+  max-width: 250px;
+  max-height: 200px;
+  min-height: 100px;
+}
+
+.advantages__title {
+  text-align: center;
+  margin: 0;
+  font-size: 40px;
+
+  font-weight: 800;
+  line-height: 0.85;
+
+  color: #212121;
+}
+
+.advantages__title > span {
+  font-size: 28px;
+  line-height: 0;
+}
+
+.advantages__subtitle {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 28px;
+
+  font-weight: 500;
+  color: #212121;
+}
+
+.advantages__subtitle_low {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+
+  font-weight: 400;
+  color: #212121;
+}
 
 @media (hover: hover) {
   .section__grid-block._hoverable:hover .section-grid-block__link-arrow {
@@ -298,7 +412,7 @@ a.section-block-contacts__info-address-large {
   }
   .section__grid-block._hoverable:hover {
     cursor: pointer;
-    box-shadow: 5px 5px 20px -20px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 25px -15px rgba(0, 0, 0, 0.75);
     transform: scale(1.01);
 
     transition: 0.25s;
@@ -333,9 +447,53 @@ a.section-block-contacts__info-address-large {
 
     transition: 0.25s;
   }
+  .section__grid-block._hoverable:hover #dye_svg_block {
+    transform: rotate(-25deg) translateY(-50px) translateX(50px);
+    background-color: #212121;
+  }
+  .section__grid-block._hoverable:hover #welding_svg_block {
+    transform: rotate(0deg) translateY(-60px) scale(1.1);
+    background-color: #212121;
+  }
+  .section__grid-block._hoverable:hover #closer_svg_block {
+    transform: rotate(25deg) translateY(-50px) translateX(-50px);
+    background-color: #212121;
+  }
 }
 
 @media screen and (max-width: 1450px) {
+  .advantages__img {
+    max-width: clamp(125px, 14vw, 170px);
+    max-height: clamp(105px, 10vw, 150px);
+    min-height: clamp(75px, 8vw, 100px);
+  }
+
+  #all-works-img {
+    max-width: clamp(175px, 18vw, 250px);
+    max-height: clamp(150px, 16vw, 200px);
+    min-height: clamp(75px, 8vw, 100px);
+  }
+
+  .advantages__title {
+    font-size: clamp(30px, 2.85vw, 40px);
+  }
+
+  .advantages__title > span {
+    font-size: clamp(22px, 1.85vw, 28px);
+  }
+
+  .advantages__subtitle {
+    font-size: clamp(22px, 1.85vw, 28px);
+  }
+
+  .advantages__subtitle_low {
+    font-size: clamp(16px, 1.35vw, 20px);
+  }
+
+  .advantages__container {
+    width: clamp(700px, 75vw, 1000px);
+    gap: clamp(40px, 5vw, 90px);
+  }
   #contract_svg_block {
     width: clamp(125px, 12.5vw, 200px);
     height: clamp(125px, 12.5vw, 200px);
@@ -464,6 +622,13 @@ a.section-block-contacts__info-address-large {
   .section-block__add-services-container {
     flex-wrap: wrap-reverse;
   }
+  .advantages__container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    gap: clamp(5px, 3vw, 40px);
+  }
   .section__grid-block {
     padding: clamp(45px, 6.75vw, 60px) clamp(35px, 4.25vw, 50px);
   }
@@ -498,6 +663,11 @@ a.section-block-contacts__info-address-large {
     gap: 30px;
   }
 
+  .advantages__container {
+  }
+  #advantages {
+    padding: 0;
+  }
   .section-block-contacts__info-container {
     display: flex;
     flex-direction: column;
@@ -509,6 +679,19 @@ a.section-block-contacts__info-address-large {
   .section-block__footer {
     padding-right: 30px;
   }
+
+  #dye_svg_block {
+    width: 125px;
+    height: 125px;
+  }
+  #welding_svg_block {
+    width: 125px;
+    height: 125px;
+  }
+  #closer_svg_block {
+    width: 125px;
+    height: 125px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -516,6 +699,20 @@ a.section-block-contacts__info-address-large {
     grid-template-rows: 1fr 1fr;
 
     gap: 30px;
+  }
+
+  #dye_svg_block {
+    width: clamp(100px, 25vw, 125px);
+    height: clamp(100px, 25vw, 125px);
+  }
+  #welding_svg_block {
+    width: clamp(100px, 25vw, 125px);
+    height: clamp(100px, 25vw, 125px);
+    bottom: 30%;
+  }
+  #closer_svg_block {
+    width: clamp(100px, 25vw, 125px);
+    height: clamp(100px, 25vw, 125px);
   }
 
   .section-block__add-services-container {

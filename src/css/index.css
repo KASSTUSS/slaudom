@@ -7,6 +7,44 @@
 
   font-family: "Roboto Condensed", sans-serif;
   font-optical-sizing: auto;
+
+  scroll-behavior: smooth;
+}
+
+.background-balls {
+  position: absolute;
+}
+
+.background-balls > div {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.75;
+}
+
+.background-balls > div:nth-child(1) {
+  top: 15%;
+  left: -5%;
+  width: 50vw;
+  height: 50vw;
+
+  background-image: radial-gradient(closest-side, #e5e2bd, #fff);
+}
+
+.background-balls > div:nth-child(2) {
+  top: 50%;
+  right: -15%;
+  width: 65vw;
+  height: 65vw;
+  background-image: radial-gradient(closest-side, #cfbde5, #fff);
+}
+
+.background-balls > div:nth-child(3) {
+  bottom: 10%;
+  left: 5%;
+  width: 45vw;
+  height: 45vw;
+
+  background-image: radial-gradient(closest-side, #bde4e5, #fff);
 }
 
 h1,
@@ -19,12 +57,16 @@ h6 {
 }
 
 body {
+  position: relative;
   margin: 0;
   padding: 0;
+  width: 100%;
   height: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 .wrapper {
+  max-width: 100%;
   padding: 0 50px;
   box-sizing: border-box;
   overflow: hidden;
@@ -43,17 +85,31 @@ body {
   .wrapper {
     padding: 0 35px;
   }
+
+  .background-balls > div:nth-child(1) {
+    width: 60vw;
+    height: 60vw;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .wrapper {
     padding: 0 25px;
   }
-}
 
+  .background-balls > div:nth-child(1) {
+    width: 70vw;
+    height: 70vw;
+  }
+}
 
 @media screen and (max-width: 500px) {
   .wrapper {
     padding: 0 15px;
+  }
+
+  .background-balls > div:nth-child(1) {
+    width: 80vw;
+    height: 80vw;
   }
 }

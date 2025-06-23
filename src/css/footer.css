@@ -34,9 +34,6 @@
   font-weight: 700;
   color: #212121;
 }
-.footer__link-item:hover {
-  text-decoration: underline;
-}
 
 .footer__link-list {
   display: flex;
@@ -44,15 +41,19 @@
   flex-direction: column;
   gap: 20px;
 }
+
 .footer__link-list-item {
   text-decoration: none;
   font-size: 20px;
   font-weight: 500;
-  color: #212121;
+  color: #505050;
 }
-
-.footer__link-list-item:hover {
-  text-decoration: underline;
+.footer__link-list-item:link,
+.footer__link-list-item:visited {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: #212121;
 }
 
 .footer__contact-item {
@@ -84,6 +85,18 @@
   font-weight: 500;
 
   color: #515151;
+}
+
+@media screen and (hover: hover) {
+  .footer__link-list-item:hover {
+    cursor: not-allowed;
+  }
+  .footer__link-list-item:link:hover,
+  .footer__link-list-item:visited:hover,
+  .footer__link-item:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
 }
 
 @media screen and (max-width: 1450px) {
