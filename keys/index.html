@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/css/index.css" />
+    <link rel="stylesheet" href="../src/css/ui.css" />
+    <link rel="stylesheet" href="../src/css/header.css" />
+    <link rel="stylesheet" href="../src/css/main.css" />
+    <link rel="stylesheet" href="../src/css/sections.css" />
+    <link rel="stylesheet" href="../src/css/footer.css" />
+
+    <script src="../src/js/burgerMenu.js"></script>
+    <script src="../src/js/select.js"></script>
+    <script src="../src/js/numInput.js"></script>
+  </head>
+  <body>
+    <div class="background-balls">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <img class="header__logo" src="../src/img/logo.png" alt="Славдом+" />
+          <nav id="menu" class="header__menu">
+            <li class="header__menu-item menu-item"><a href="/">главная</a></li>
+            <li class="header__menu-item menu-item">
+              <a href="/keys">чипы</a>
+            </li>
+            <li class="header__menu-item menu-item">
+              <a href="/sub-device">аудиотрубка</a>
+            </li>
+            <li class="header__menu-item menu-item">
+              <a href="/services">услуги</a>
+            </li>
+            <li class="header__menu-item menu-item">
+              <a href="/info">информация</a>
+            </li>
+            <a
+              href="/#feedback-section"
+              class="request-button_link-mobile menu-item"
+            >
+              Оставить заявку
+            </a>
+          </nav>
+          <a
+            href="#feedback-section"
+            id="request-button_link-header"
+            class="request-button_link"
+          >
+            Оставить заявку
+          </a>
+          <label id="burger" for="check" class="burger">
+            <input type="checkbox" id="check" />
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+      </header>
+
+      <div class="page-wrapper">
+        <main id="sub_device_main" class="main">
+          <div class="main__container">
+            <div class="main__block">
+              <div class="main__text">
+                <h1 class="main__title">
+                  Изготовление домофонных<br />ключей (чипов)
+                </h1>
+                <p class="main__subtitle">С гарантией и по договору</p>
+              </div>
+              <div class="main__button-container">
+                <a href="#feedback-section" class="request-button_link">
+                  заказать чип
+                </a>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <section class="section" id="advantages">
+          <div class="advantages__container">
+            <div class="advantages__item-container">
+              <img
+                src="../src/img/guarantee.svg"
+                alt="Гарантия"
+                class="advantages__img"
+              />
+              <p class="advantages__title-box">
+                <h3 class="advantages__title">
+                  Гарантия
+                </h3>
+                <p class="advantages__subtitle">
+                  12 месяцев
+                </p>
+              </p>
+            </div>
+            <div class="advantages__item-container">
+              <img
+                src="../src/img/delivery.svg"
+                alt="Доставка"
+                class="advantages__img"
+              />
+              <p class="advantages__title-box">
+                <h3 class="advantages__title">
+                  Возможна
+                </h3>
+                <p class="advantages__subtitle">
+                  <strong>бесплатная доставка</strong>
+                </p>
+              </p>
+            </div>
+            <div class="advantages__item-container">
+              <img
+                src="../src/img/payment.svg"
+                alt="Доставка"
+                class="advantages__img"
+              />
+              <p class="advantages__title-box">
+                <h3 class="advantages__title">
+                  Удобная оплата
+                </h3>
+                <p class="advantages__subtitle">
+                  в жировку / ЕРИП
+                </p>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="feedback-section" class="section">
+          <div class="section__main">
+            <div
+              class="section__grid-block"
+              style="overflow: auto; height: auto"
+            >
+              <header class="section__grid-block__header">
+                <h4 class="section__grid-block-title">
+                  Заказать изготовление чипа
+                </h4>
+              </header>
+              <main class="section__grid-block__main">
+                <form action="" method="post">
+                  <div class="feedback-section__grid-container">
+                    <div class="input-box" style="grid-column: span 5">
+                      <input
+                        type="text"
+                        name="name"
+                        autocomplete="name"
+                        id="nameInput"
+                        placeholder="&nbsp;"
+                      />
+                      <label for="nameInput">Ваше имя*</label>
+                    </div>
+                    <div class="input-box" style="grid-column: span 5">
+                      <input
+                        type="tel"
+                        name="tel"
+                        autocomplete="tel"
+                        id="telInput"
+                        placeholder="&nbsp;"
+                      />
+                      <label for="telInput">Ваше номер телефона*</label>
+                    </div>
+                    <div class="input-box" style="grid-column: span 5">
+                      <input
+                        type="email"
+                        name="email"
+                        autocomplete="email"
+                        id="emailInput"
+                        placeholder="&nbsp;"
+                      />
+                      <label for="emailInput">Ваш e-mail*</label>
+                    </div>
+
+                    <div class="input-box" style="grid-column: span 3">
+                      <input
+                        type="text"
+                        name="city"
+                        autocomplete="address-level2"
+                        id="cityInput"
+                        placeholder="&nbsp;"
+                      />
+                      <label for="cityInput">Город*</label>
+                    </div>
+
+                    <div class="input-box" style="grid-column: span 4">
+                      <input
+                        type="text"
+                        name="street"
+                        autocomplete="street-address"
+                        id="streetInput"
+                        placeholder="&nbsp;"
+                      />
+                      <label for="streetInput">Улица*</label>
+                    </div>
+
+                    <div class="input-box" style="grid-column: span 2">
+                      <input
+                        type="text"
+                        name="house"
+                        id="houseInput"
+                        placeholder="&nbsp;"
+                      />
+                      <label for="houseInput">Дом*</label>
+                    </div>
+
+                    <div class="input-box" style="grid-column: span 2">
+                      <input
+                        type="text"
+                        name="building"
+                        id="buildingInput"
+                        placeholder="&nbsp;"
+                      />
+                      <label for="buildingInput">Корп.</label>
+                    </div>
+
+                    <div class="input-box" style="grid-column: span 2">
+                      <input
+                        type="number"
+                        name="entrance"
+                        id="entranceInput"
+                        placeholder="&nbsp;"
+                        min="1"
+                        max="99"
+                      />
+                      <label for="entranceInput">Подъезд*</label>
+                    </div>
+
+                    <div class="input-box" style="grid-column: span 2">
+                      <input
+                        type="text"
+                        name="apartment"
+                        id="apartmentInput"
+                        placeholder="&nbsp;"
+                      />
+                      <label for="apartmentInput">Квартира*</label>
+                    </div>
+
+                    <div
+                      class="input-box"
+                      style="grid-column: span 15; min-height: 300px"
+                    >
+                      <div class="grid-container-keys">
+                        <div
+                          class="grid-container-keys__col keys-input__container"
+                        >
+                          <div
+                            id="chip_svg_block"
+                            class="keys-input__chip-image"
+                          ></div>
+                          <div class="keys-input">
+                            <label class="keys-input__label" for="">
+                              Количество чипов
+                            </label>
+                            <div class="keys-input__box">
+                              <div
+                                id="minus-button"
+                                class="keys-input__button keys-input__button_minus"
+                              ></div>
+                              <input
+                                class="keys-input__input"
+                                type="number"
+                                name=""
+                                id="chip-input"
+                                min="1"
+                                max="99"
+                                value="1"
+                                disabled
+                              />
+                              <div
+                                id="plus-button"
+                                class="keys-input__button keys-input__button_plus"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="grid-container-keys__col final-price__container"
+                        >
+                          <h3 class="final-price__subtitle">
+                            итоговая стоимость:
+                          </h3>
+                          <h2 class="final-price__title" id="prive-value">
+                            12 BYN
+                          </h2>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="grid-column: span 12"></div>
+
+                    <button
+                      type="submit"
+                      class="request-button_link request-button_chip"
+                      style="grid-column: span 3; margin-top: 20px"
+                    >
+                      Отправить заявку
+                    </button>
+                  </div>
+                </form>
+              </main>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__col">
+          <img src="../src/img/logo.png" alt="Славдом" class="footer__logo" />
+          <a href="tel:+375447497620" class="footer__contact-item">
+            <img src="../src/img/phone.svg" alt="" />
+            <span>+375 (44) 749-76-20</span>
+          </a>
+          <a href="tel:+375447497620" class="footer__contact-item">
+            <img src="../src/img/mail.svg" alt="" />
+            <span>info@slaudom.by</span>
+          </a>
+        </div>
+        <div class="footer__col" style="gap: 30px">
+          <a href="/" class="footer__link-item"> Главная </a>
+          <a href="/keys" class="footer__link-item"> Чипы </a>
+          <a href="/sub-device" class="footer__link-item"> Аудиотрубка </a>
+        </div>
+        <div class="footer__col" style="gap: 25px">
+          <a href="/services" class="footer__link-item"> Каталог услуг </a>
+          <div class="footer__link-list">
+            <a href="/add-services" class="footer__link-list-item"
+              >Дополнительные услуги</a
+            >
+            <a class="footer__link-list-item"
+              >Модернизация домофонной системы</a
+            >
+            <a class="footer__link-list-item"
+              >Замена подъездной двери</a
+            >
+            <a class="footer__link-list-item"
+              >Тех. обслуживание ЗПУ</a
+            >
+            <a class="footer__link-list-item"
+              >Видеодомофон</a
+            >
+          </div>
+        </div>
+        <div class="footer__col" style="gap: 25px">
+          <a href="/info" class="footer__link-item"> Информация </a>
+          <div class="footer__link-list">
+            <a href="/info/contacts" class="footer__link-list-item">Контакты</a>
+            <a class="footer__link-list-item"
+              >Заключение договора</a
+            >
+            <a href="/info/price-lists" class="footer__link-list-item"
+              >Прейскуранты</a
+            >
+            <a class="footer__link-list-item footer__link-list-item_disabled">О компании</a>
+          </div>
+        </div>
+        <p class="footer__copyright">© ЧCУП «Славдом-плюс», 2025</p>
+      </div>
+    </footer>
+  </body>
+</html>

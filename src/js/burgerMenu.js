@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(() => {
       window.location = e.target.getAttribute("href");
-    }, 400);
+    }, isActive ? 400 : 0);
   }
   function windowResizeHandle() {
     closeBurgerMenu();
