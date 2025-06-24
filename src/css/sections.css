@@ -468,6 +468,11 @@ a.section-block-contacts__info-address-large {
     min-height: clamp(75px, 8vw, 100px);
   }
 
+  .keys-input__chip-image {
+    width: clamp(175px, 20vw, 300px);
+    height: clamp(175px, 20vw, 300px);
+  }
+
   #all-works-img {
     max-width: clamp(175px, 18vw, 250px);
     max-height: clamp(150px, 16vw, 200px);
@@ -662,9 +667,6 @@ a.section-block-contacts__info-address-large {
 
     gap: 30px;
   }
-
-  .advantages__container {
-  }
   #advantages {
     padding: 0;
   }
@@ -765,4 +767,42 @@ a.section-block-contacts__info-address-large {
   .feedback-section__grid-container {
     gap: 20px;
   }
+
+  .advantages__img {
+    max-width: clamp(125px, 14vw, 170px);
+    max-height: clamp(105px, 10vw, 150px);
+    min-height: clamp(75px, 8vw, 100px);
+  }
+
+  .keys-input__chip-image {
+    width: clamp(175px, 20vw, 300px);
+    height: clamp(175px, 20vw, 300px);
+  }
+
+  #all-works-img {
+    max-width: clamp(145px, 25vw, 175px);
+    max-height: clamp(125px, 20vw, 150px);
+    min-height: clamp(55px, 15vw, 75px);
+  }
+
+  .advantages__title {
+    font-size: clamp(22px, 5vw, 30px);
+  }
+
+  .advantages__title > span {
+    font-size: clamp(18px, 2vw, 22px);
+  }
+
+  .advantages__subtitle {
+    font-size: clamp(17px, 3.5vw, 22px);
+  }
+
+  .advantages__subtitle_low {
+    font-size: clamp(15px, 2vw, 16px);
+  }
+
+  .advantages__container {
+    gap: clamp(25px, 3vw, 40px);
+  }
+
 }
