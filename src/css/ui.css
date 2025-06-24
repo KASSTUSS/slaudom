@@ -412,6 +412,10 @@
   max-width: none;
 }
 
+.keys-cont {
+  min-height: 300px;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .keys-input__input:hover {
     cursor: default;
@@ -438,7 +442,49 @@
   }
 }
 
+@media screen and (max-width: 1450px) {
+  .keys-cont {
+    min-height: clamp(300px, 33vw, 450px);
+  }
+  .grid-container-keys {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .final-price__container {
+    align-items: center;
+    gap: 16px;
+  }
+
+  .final-price__subtitle {
+    font-size: clamp(24px, 3vw, 36px);
+  }
+
+  .final-price__title {
+    font-size: clamp(48px, 5vw, 64px);
+  }
+  .keys-input__label {
+    font-size: clamp(24px, 3vw, 36px);
+  }
+}
+
 @media screen and (max-width: 600px) {
+  .keys-cont {
+    min-height: clamp(450px, 50vw, 550px);
+  }
+  .keys-input__container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 25px;
+  }
+
+  .keys-input {
+    align-items: center;
+  }
   .select__label,
   .input-box label {
     font-size: clamp(17px, 3.75vw, 20px);
@@ -461,5 +507,8 @@
 
   .input-box textarea {
     padding-top: 40px;
+  }
+  .keys-input__input {
+    font-size: 32px !important;
   }
 }
